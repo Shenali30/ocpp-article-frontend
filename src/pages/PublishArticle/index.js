@@ -1,21 +1,16 @@
-import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Avatar, Box, Button, Card, CardContent, Divider, Grid, IconButton, Menu, MenuItem, Stack, Typography } from '@mui/material';
+import { Button, Card, CardContent, Divider, Grid, Stack, Typography } from '@mui/material';
 import { AlertMessage } from 'components/AlertMessage';
 import { CircularLoader } from 'components/CircularLoader';
-import { AutoCompleteField } from 'components/hook-form-components/AutoCompleteField';
-import { DatePickerField } from 'components/hook-form-components/DatePickerField';
 import { InputField } from 'components/hook-form-components/InputField';
 import { API_BASED_ERROR_MESSAGE, REQUIRED_FIELD_TEXT } from 'constants';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
-import { selectDropdownData } from 'redux/familyBookDataSlice';
 import { selectAuthData } from 'redux/userSlice';
-import { getUserProfile, updateUserProfile } from 'services/userAccount';
-import { dropdownDataMapping, useWindowSize } from 'utils';
 import { publishArticle } from 'services/article';
+import { useWindowSize } from 'utils';
+import * as yup from 'yup';
 
 export const PublishArticle = () => {
   const { user } = useSelector(selectAuthData);

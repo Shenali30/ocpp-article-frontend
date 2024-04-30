@@ -1,13 +1,8 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { LoadingButton } from '@mui/lab';
-import { IconButton, InputAdornment, Stack } from '@mui/material';
+import { Button, Stack } from '@mui/material';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { AlertMessage } from 'components/AlertMessage';
-import { InputField } from 'components/hook-form-components/InputField';
-import { API_BASED_ERROR_MESSAGE, REQUIRED_FIELD_TEXT } from 'constants';
+import { API_BASED_ERROR_MESSAGE } from 'constants';
 import { DeviceUUID } from 'device-uuid';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -17,10 +12,7 @@ import { initiateAuth, selectAuthData, setAuthSuccess, updateTokens } from 'redu
 import { userLogin } from 'services/userAuth';
 import { useWindowSize } from 'utils';
 import * as yup from 'yup';
-import EcclesiaEase from '../../assets/Logo/ecclesia-ease-transparent.png';
-import LoginWallpaper from '../../assets/images/front-page-image.jpg';
 import { HOME } from '../../navigation/Routes';
-import { ChangePassword } from './ChangePassword';
 
 export const LoginView = () => {
   const navigate = useNavigate();
@@ -44,8 +36,8 @@ export const LoginView = () => {
   };
 
   const validationSchema = yup.object({
-    userId: yup.string().required(REQUIRED_FIELD_TEXT),
-    password: yup.string().required(REQUIRED_FIELD_TEXT),
+    // userId: yup.string().required(REQUIRED_FIELD_TEXT),
+    // password: yup.string().required(REQUIRED_FIELD_TEXT),
   });
 
   const hookForm = useForm({
@@ -107,69 +99,16 @@ export const LoginView = () => {
             margin: 5,
             display: 'flex',
             flexDirection: 'column',
+            justifyContent: 'center',
             alignItems: 'center',
           }}
         >
           <Typography variant='h3' color={'text.primary'}>Article App</Typography>
-          <div style={{ marginTop: '40px', width: '30%' }}>
-            {!showChangePassword.show ? (
-              <Box component="form" noValidate>
-                <Typography component="h1" variant="h5" color={'text.primary'}>
-                  Sign in
-                </Typography>
-                <InputField control={hookForm.control} margin="normal" id="userId" label="Username or Email" name="userId" fullWidth />
-                <InputField
-                  control={hookForm.control}
-                  margin="normal"
-                  name="password"
-                  label="Password"
-                  type={isPasswordAsText ? 'text' : 'password'}
-                  id="password"
-                  onKeyDown={(ev) => {
-                    if (ev.key === 'Enter') hookForm.handleSubmit(onSubmit, onError)();
-                  }}
-                  fullWidth
-                  InputProps={{
-                    autoComplete: 'off',
-                    endAdornment: (
-                      <InputAdornment position="end">
-                        <IconButton
-                          disableRipple
-                          aria-label="toggle password visibility"
-                          onMouseLeave={() => setPasswordToVisible(false)}
-                          onMouseDown={() => setPasswordToVisible(true)}
-                          onMouseUp={() => setPasswordToVisible(false)}
-                          edge="end"
-                        >
-                          {isPasswordAsText ? <Visibility /> : <VisibilityOff />}
-                        </IconButton>
-                      </InputAdornment>
-                    ),
-                  }}
-                />
-                <LoadingButton
-                  loading={loading}
-                  type="button"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2, backgroundColor: 'black' }}
-                  onClick={() => hookForm.handleSubmit(onSubmit, onError)()}
-                >
-                  Sign In
-                </LoadingButton>
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                  <Typography variant="body2">Version {process.env.REACT_APP_VERSION}</Typography>
-                </Box>
-                <AlertMessage sx={{ mt: 3 }} show={message.show} message={message.text} type={message.type} onClose={() => setMessage({ show: false, text: null, type: null })} />
-              </Box>
-            ) : (
-              <ChangePassword userData={showChangePassword.data} tempPassword={showChangePassword?.tempPassword} onLogInSuccess={onLogInSuccess} />
-            )}
+          <div style={{ marginTop: '40px' }}>
+            <Button variant='outlined' size='large' onClick={() => hookForm.handleSubmit(onSubmit, onError)()}>Go To Protal</Button>
           </div>
         </Box>
       </div>
-
-      {/* <img src={LoginWallpaper} height={'100%'} /> */}
     </Stack>
   );
 };

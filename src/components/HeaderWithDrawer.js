@@ -148,19 +148,9 @@ export default function HeaderWithDrawer() {
           disabled: false,
         },
         {
-          name: 'Dashboard',
-          icon: <DashboardOutlinedIcon />,
-          navigation: DASHBOARD,
-        },
-        {
           name: 'Publish Article',
           icon: <DashboardOutlinedIcon />,
           navigation: PUBLISH_ARTICLE,
-        },
-        {
-          name: 'View Articles',
-          icon: <DashboardOutlinedIcon />,
-          navigation: VIEW_ARTICLES,
         },
       ],
 
