@@ -1,0 +1,63 @@
+/* FONTS */
+@font-face {
+  font-family: "Favorit";
+  src: url(assets/fonts/FavoritStd-Regular.otf);
+}
+
+@font-face {
+  font-family: "FavoritMedium";
+  src: url(assets/fonts/FavoritStd-Medium.otf);
+}
+@font-face {
+  font-family: "FavoritBold";
+  src: url(assets/fonts/FavoritStd-Bold.otf);
+}
+
+@font-face {
+  font-family: "Interstate";
+  src: url(assets/fonts/Interstate-Regular.ttf);
+}
+
+/* ----- Scroll Bar Styles ------- */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b3b2b2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #959595;
+}
+
+/* ---------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-family: Favorit, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  background-color: #EEF2F6;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.centeredHeaderCell span {
+  justify-content: center; /* center, flex-start (left), flex-end(right) */
+}
+.centeredHeaderCell span button {
+  margin-right: 0;
+  margin-left: 0px; /* was previously -8px so not quite centered */
+}
+
+
