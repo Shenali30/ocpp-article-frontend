@@ -3,10 +3,10 @@ export const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 export const TEST_RESPONSES = {
   USER_LOGIN: {
     userDetails: {
-      username: 'Eshan_001',
-      email: 'eshan98kavinda@gmail.com',
+      username: 'testuser@gmail.com',
+      email: 'testuser@gmail.com',
       title: 'Mr.',
-      name: 'Eshan',
+      name: 'Test User',
       scope: 'ADMIN',
       promptPasswordChange: false,
     },
@@ -20,80 +20,9 @@ export const TEST_RESPONSES = {
     },
     permissions: {
       modules: [
-        {
-          id: 1,
-          name: 'Dashboard',
-        },
-        {
-          id: 2,
-          name: 'FamilyBook.Create',
-        },
-        {
-          id: 3,
-          name: 'FamilyBook.View',
-        },
-        {
-          id: 4,
-          name: 'FamilyBook.Edit',
-        },
-        {
-          id: 5,
-          name: 'Novenas.View',
-        },
-        {
-          id: 6,
-          name: 'Novenas.Edit',
-        },
-        {
-          id: 7,
-          name: 'Zones.View',
-        },
-        {
-          id: 8,
-          name: 'Zones.Edit',
-        },
-        {
-          id: 9,
-          name: 'Assistance.ViewFamilies',
-        },
-        {
-          id: 10,
-          name: 'Assistance.Categories',
-        },
-        {
-          id: 11,
-          name: 'Celebrations',
-        },
-        {
-          id: 12,
-          name: 'Users.Create',
-        },
-        {
-          id: 13,
-          name: 'Users.View',
-        },
-        {
-          id: 14,
-          name: 'Users.Edit',
-        },
-        {
-          id: 15,
-          name: 'Baptism Certificate',
-        },
-        {
-          id: 16,
-          name: 'Marriage Certificate',
-        },
-        {
-          id: 17,
-          name: 'Death Certificate',
-        },
       ],
       churches: [
-        {
-          id: 'STJ-KA',
-          name: "St. Joseph's Church, Kanuwana",
-        },
+        
       ],
     },
     baseResponse: {
@@ -107,10 +36,10 @@ export const TEST_RESPONSES = {
   },
   REFRESH_TOKEN: {
     userDetails: {
-      username: 'Eshan_001',
-      email: 'eshan98kavinda@gmail.com',
+      username: 'testuser@gmail.com',
+      email: 'testuser@gmail.com',
       title: 'Mr.',
-      name: 'Eshan',
+      name: 'Test User',
       scope: 'ADMIN',
       promptPasswordChange: false,
     },
@@ -123,82 +52,8 @@ export const TEST_RESPONSES = {
         'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJSRUZSRVNIX1RPS0VOIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzE0MzIyMDIxLCJpYXQiOjE3MTQzMTg0MjEsInVzZXJuYW1lIjoiRXNoYW5fMDAxIiwiYWN0aXZlU2Vzc2lvbklkIjoiMjlhYTVjMTYtN2M2Mi00ZWIzLWJiMTQtOGJhZjBlMGFiZjY2In0._ewbiToX7ocNDYkMsrhxb0uuZ8LxRNKK_MLb3Xw3Rh5tt3bjvIGb5uhg0q8bmW8jYKA_wxtUPpRSYyS8p11TRQ',
     },
     permissions: {
-      modules: [
-        {
-          id: 1,
-          name: 'Dashboard',
-        },
-        {
-          id: 2,
-          name: 'FamilyBook.Create',
-        },
-        {
-          id: 3,
-          name: 'FamilyBook.View',
-        },
-        {
-          id: 4,
-          name: 'FamilyBook.Edit',
-        },
-        {
-          id: 5,
-          name: 'Novenas.View',
-        },
-        {
-          id: 6,
-          name: 'Novenas.Edit',
-        },
-        {
-          id: 7,
-          name: 'Zones.View',
-        },
-        {
-          id: 8,
-          name: 'Zones.Edit',
-        },
-        {
-          id: 9,
-          name: 'Assistance.ViewFamilies',
-        },
-        {
-          id: 10,
-          name: 'Assistance.Categories',
-        },
-        {
-          id: 11,
-          name: 'Celebrations',
-        },
-        {
-          id: 12,
-          name: 'Users.Create',
-        },
-        {
-          id: 13,
-          name: 'Users.View',
-        },
-        {
-          id: 14,
-          name: 'Users.Edit',
-        },
-        {
-          id: 15,
-          name: 'Baptism Certificate',
-        },
-        {
-          id: 16,
-          name: 'Marriage Certificate',
-        },
-        {
-          id: 17,
-          name: 'Death Certificate',
-        },
-      ],
-      churches: [
-        {
-          id: 'STJ-KA',
-          name: "St. Joseph's Church, Kanuwana",
-        },
-      ],
+      modules: [],
+      churches: [],
     },
     wish: null,
     baseResponse: {

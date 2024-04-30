@@ -49,7 +49,7 @@ export const HomeView = () => {
                 <Card variant="outlined" color="primary" sx={{ borderRadius: 5, minHeight: windowHeight - 220 }}>
                   <div style={{ margin: '10px' }}>
                     <Grid container spacing={2}>
-                      {data.map((d, i) => (
+                      {data?.map((d, i) => (
                         <Grid key={i} item xs={4}>
                           <Card variant="outlined" color="primary" sx={{ borderRadius: 2, height: '100%' }}>
                             <CardContent>
